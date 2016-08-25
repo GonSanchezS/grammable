@@ -41,6 +41,9 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 # Add sprockets
 gem 'sprockets', '2.11.0'
 
+# Add simpleform
+gem 'simple_form'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
