@@ -44,6 +44,9 @@ gem 'sprockets', '2.11.0'
 # Add simpleform
 gem 'simple_form'
 
+# Add devise
+gem 'devise'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
