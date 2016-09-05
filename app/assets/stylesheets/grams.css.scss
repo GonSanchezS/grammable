@@ -1,3 +1,33 @@
 // Place all the styles related to the grams controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.feed {
+    @include column-structure;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: .25rem;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+  border: 1px solid #e8e8e8;
+  margin-top: 40px;
+  padding: 0;
+}
+
+.description {
+  margin: 10px;
+  font-size: 18px;
+}
+
+.card p, .card .message {
+  font-size: 18px;
+  margin: 20px;
+}
+
+.gram-action a {
+  color: $fourth-color;
+  font-size: 16px;
+  margin-left:10px;
+}
+

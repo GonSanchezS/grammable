@@ -1,3 +1,18 @@
 // Place all the styles related to the comments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.comments {
+  padding: 10px;
+}
+
+.comment {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.handle {
+  color: $secondary-color;
+  font-weight: bold;
+  font-size: 18px;
+}

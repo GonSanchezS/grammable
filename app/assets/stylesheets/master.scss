@@ -1,0 +1,23 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$primary-font: 'Roboto', sans-serif;
+$logo-font: 'Pacifico', cursive;
+$primary-color: #f1404b;
+$secondary-color: #252c41;
+$tertiary-color: #f4f5f9;
+$fourth-color: #dddfe6;
+
+@mixin column-structure {
+  @include make-xs-column(10);
+  @include make-xs-column-offset(1);
+  @include make-sm-column(8);
+  @include make-sm-column-offset(2);
+  @include make-md-column(6);
+  @include make-md-column-offset(3);
+}
+
+body {
+  background-color: $tertiary-color;
+  font-family: $primary-font;
+}

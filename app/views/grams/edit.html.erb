@@ -1,5 +1,10 @@
+<div class="card form">
+
 <h1>In this page we'll edit grams</h1>
 <%= simple_form_for @gram do |f| %>
   <%= f.input :message %>
-  <%= f.submit %>
+  <%= f.input :picture %>
+  <%= f.submit 'Update', class: 'form-button' %>
 <% end %>
+
+</div>

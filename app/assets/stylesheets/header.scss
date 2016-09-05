@@ -1,0 +1,33 @@
+.top-nav {
+  background-color: white;
+  height: 70px;
+  padding-top:15px;
+}
+
+.brand {
+  font-size: 30px;
+  font-family: $logo-font;
+
+  a {
+    color: $primary-color;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
+.top-nav .add {
+  margin-top:10px;
+}
+
+.top-nav .add a {
+  color: $secondary-color;
+  font-size:16px;
+  padding-left:8px;
+  font-weight: 700;
+}
+
+.welcome-message {
+  color: #dddfe6;
+}

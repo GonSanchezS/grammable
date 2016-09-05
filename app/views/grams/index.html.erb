@@ -1,8 +1,36 @@
-<h1>Grams!</h1>
+<div class='feed'>
 
 <% @grams.each do |gram| %>
-  <div>
-    <%= gram.message %>
-    <%= image_tag gram.picture %>
+  <div class="card">
+    <%= image_tag gram.picture, class: 'img-responsive' %>
+    <div class="description"><span class="handle"><%= gram.user.email %></span>
+    <%= gram.message %></div>
+
+    <div class='gram-action pull-left'>
+      <% if current_user && current_user == gram.user %>
+        <%= link_to 'Edit', edit_gram_path(gram) %>
+        <%= link_to 'Destroy', gram_path(gram), method: :delete, data: {confirm: 'Are you sure?'} %>
+      <% end %>
+    </div>
+    <br class='clear-fix' />
+    <div class='comments'> 
+      <% gram.comments.each do |comment| %>
+          <div class="comment">
+            <span class="handle">
+              <%= comment.user.email %>
+            </span>
+            
+            <%= comment.message %>
+          </div>
+        <% end %>
+        <br />
+      <%= simple_form_for Comment.new, url: gram_comments_path(gram) do |f| %>
+        <%= f.input :message, label: 'Leave a comment' %>
+        <%= f.submit 'Add Comment', class: 'form-button' %>
+      <% end %>
+    </div>
+
   </div>
 <% end %>
+
+</div>

@@ -3,10 +3,30 @@
 <head>
   <title>Grammable</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,700" rel="stylesheet">
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+  <div class="top-nav">
+    <div class="feed">
+      <div class="brand pull-left">
+        <%= link_to 'Grammable', root_path %>
+      </div>
+      <div class="add pull-right">
+        <% if current_user %>
+          <span class="welcome-message">Welcome, <%= current_user.email %></span>
+        <%= link_to "New Post", new_gram_path %>
+          <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+        <% else %>
+          <%= link_to "Sign In", new_user_session_path %>
+          <%= link_to "Sign Up", new_user_registration_path %>
+        <% end %>
+      </div>
+    </div>
+    <br class="clear-fix" />
+  </div>
 
 <%= yield %>
 

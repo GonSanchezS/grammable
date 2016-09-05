@@ -1,0 +1,43 @@
+.form {
+  @include column-structure;
+}
+
+.card.form {
+  padding: 20px;
+}
+
+label {
+  font-size: 16px;
+  color: $fourth-color;
+}
+
+input {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.form-button {
+  background-color: $secondary-color;
+  width: 100%;
+  border: none;
+  font-size: 18px;
+  color: white;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.input.boolean {
+  margin-left:18px;
+  margin-top:5px;
+}
+
+.input.boolean label {
+  margin-top:5px;
+  line-height: 44px;
+}
+
+h2 {
+  padding-top: 10px;
+  text-align: center;
+  color: $secondary-color;
+}
