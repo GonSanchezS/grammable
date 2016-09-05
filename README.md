@@ -9,7 +9,7 @@ A few things to consider:
 
 ### Installation
 
-Deploying Grammable is super easy :rocket:
+Setting up Grammable locally is super easy :rocket:
 
 1 - Clone the repo:
 ```git clone https://github.com/GonSanchezS/grammable.git```
@@ -19,6 +19,12 @@ Deploying Grammable is super easy :rocket:
 
 3 - Create the database:
 ```rake db:create```
+
+4 - Run the migration:
+```rake db:migrate```
+
+
+Depending on your environment and setup configuration you  may need to change ```config/database.yml```.
 
 ### Thanks! :heart_eyes:
 
