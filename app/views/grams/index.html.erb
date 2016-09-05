@@ -6,13 +6,15 @@
     <div class="description"><span class="handle"><%= gram.user.email %></span>
     <%= gram.message %></div>
 
-    <div class='gram-action pull-left'>
+    
       <% if current_user && current_user == gram.user %>
+      <div class='gram-action pull-left'>
         <%= link_to 'Edit', edit_gram_path(gram) %>
         <%= link_to 'Destroy', gram_path(gram), method: :delete, data: {confirm: 'Are you sure?'} %>
+      </div>
       <% end %>
-    </div>
-    <br class='clear-fix' />
+
+  
     <div class='comments'> 
       <% gram.comments.each do |comment| %>
           <div class="comment">
